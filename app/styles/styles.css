@@ -1,0 +1,63 @@
+ .ems-body {
+    height: 560px;
+}
+
+ .ems-body .side-nav {
+     height: inherit;
+     background: #f1f1f1;
+ }
+
+ .ems-body .content-nav {
+     height: inherit;
+ }
+
+ .ems-header {
+     height: 50px;
+     background: #333;
+     color: white;
+ }
+
+ .ems-footer {
+     height: 30px;
+     border-top: 1px solid lightgray;
+ }
+
+  .contentList {
+      list-style-type: none;
+      text-align: justify;
+      margin-top: 5px;
+      margin-left : -40px;
+  }
+
+  .contentList a {
+      margin-left: 5px;
+  }
+  .sideNavHeader {
+      border-bottom: 1px solid lightgray;
+  }
+
+  .employeeDashboard td, .companyDashboard td {
+      text-align: justify;
+  }
+
+  .add-employee-container, .add-company-container {
+      height: 300px;
+  }
+
+  .add-employee-container label, .add-company-container label {
+      float: left;
+  }
+  .add-employee-container .row, .add-company-container .row {
+    padding-top: 25px;
+  }
+
+  .add-employee-container .btn-container, .add-company-container .btn-container {
+    float: right;
+    margin-right: 15px;
+    margin-top: 25px;
+  }
+
+  .add-employee-container .company-dropdown, .add-company-container .company-dropdown {
+      position: absolute !important;
+      margin-top: 3px;
+  }

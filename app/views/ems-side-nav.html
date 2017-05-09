@@ -1,0 +1,11 @@
+<div>
+    <h4 class="sideNavHeader">
+        {{header}} 
+    </h4>
+    <ul>
+        <li class="contentList" *ngFor="let item of contentList">
+            <i class="{{item.icon}}" aria-hidden="true"></i>
+            <a routerLink="{{item.url}}" routerLinkActive="active">{{item.name}}</a></li>
+    </ul>
+
+</div>

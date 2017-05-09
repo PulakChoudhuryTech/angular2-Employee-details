@@ -1,0 +1,23 @@
+<div class="employeeDashboard">
+    <h4>Employee Dashboard</h4>
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Emp Name</th>
+                <th>Emp Id</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employeeList">
+                <td>{{emp.name}}</td>
+                <td>{{emp.empId}}</td>
+                <td>{{emp.company}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.contact}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

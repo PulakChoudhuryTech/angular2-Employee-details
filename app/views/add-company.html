@@ -1,0 +1,29 @@
+<h4>Add Company</h4>
+<div class="container-fluid well add-company-container">
+    <div class="row">
+        <div class="col-xs-3">
+            <label for="name">Company Name:</label>
+            <input type="text" class="form-control" id="empName" [(ngModel)]="company.name">
+        </div>
+        <div class="col-xs-3">
+            <label for="company">Type:</label><br/>
+            <input type="text" class="form-control" id="empName" [(ngModel)]="company.type">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3">
+            <label for="email">Location:</label>
+            <input type="text" class="form-control" id="empEmail" [(ngModel)]="company.location">
+        </div>
+        <div class="col-xs-3">
+            <label for="contact">Website Url:</label>
+            <input type="text" class="form-control" id="empContact" [(ngModel)]="company.url">
+        </div>
+    </div>
+    <div class="row">
+        <div class="btn-container">
+            <button type="button" class="btn btn-warning" (click)="clearFields()">Clear</button>
+            <button type="button" class="btn btn-success" (click)="onAddCompany()">Add</button>
+        </div>
+    </div>
+</div>

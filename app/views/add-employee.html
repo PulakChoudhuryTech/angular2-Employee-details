@@ -1,0 +1,35 @@
+<h4>Add Employee</h4>
+<div class="container-fluid well add-employee-container">
+    <div class="row">
+        <div class="col-xs-3">
+            <label for="name">Emp Name:</label>
+            <input type="text" class="form-control" id="empName" [(ngModel)]="employee.name">
+        </div>
+        <div class="col-xs-3">
+            <label for="company">Company:</label><br/>
+            <div class="dropdown company-dropdown" id="company">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">{{employee.company ? employee.company : 'Select Company'}}
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li  *ngFor="let company of companies"><a href="javascript:void(0)" (click)="onSelectCompany(company.name)">{{company.name}}</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3">
+            <label for="email">Email:</label>
+            <input type="text" class="form-control" id="empEmail" [(ngModel)]="employee.email">
+        </div>
+        <div class="col-xs-3">
+            <label for="contact">Contact:</label>
+            <input type="text" class="form-control" id="empContact" [(ngModel)]="employee.contact">
+        </div>
+    </div>
+    <div class="row">
+        <div class="btn-container">
+            <button type="button" class="btn btn-warning" (click)="clearFields()">Clear</button>
+            <button type="button" class="btn btn-success" (click)="onAddEmployee()">Add</button>
+        </div>
+    </div>
+</div>

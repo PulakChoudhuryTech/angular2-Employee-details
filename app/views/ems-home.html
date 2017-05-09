@@ -1,0 +1,14 @@
+<header class="ems-header">
+    <span>{{logo}}</span>
+</header>
+<section class="container-fluid text-center">
+    <div class="row ems-body">
+        <div class="col-xs-2 side-nav">
+            <ems-side-nav [header]="sideNavHeader"></ems-side-nav>
+        </div>
+        <div class="col-xs-10 content-nav">
+             <router-outlet></router-outlet>
+        </div>
+    </div>
+</section>
+<footer class="container-fluid ems-footer">Footer</footer>

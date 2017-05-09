@@ -1,0 +1,21 @@
+<div class="companyDashboard">
+    <h4>Company dashboard</h4>
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Location</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of companyList">
+                <td>{{emp.name}}</td>
+                <td>{{emp.type}}</td>
+                <td>{{emp.location}}</td>
+                <td>{{emp.url}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

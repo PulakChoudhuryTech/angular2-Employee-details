@@ -1,0 +1,30 @@
+[
+    {
+        "name": "OFS",
+        "type": "IT",
+        "location" : "Chennai",
+        "url" : "www.ofs.com",
+        "currentEmpId" : 1212
+    },
+     {  
+        "name": "CTS",
+        "type": "IT",
+        "location" : "Chennai",
+        "url" : "www.cts.com",
+        "currentEmpId" : 13
+    },
+    {
+        "name": "TCS",
+        "type": "IT",
+        "location" : "Chennai",
+        "url" : "www.tcs.com",
+        "currentEmpId" : 100
+    },
+   {
+        "name": "CAPGEMINI",
+        "type": "IT",
+        "location" : "Chennai",
+        "url" : "www.cap.com",
+        "currentEmpId" : 500
+    }
+]
