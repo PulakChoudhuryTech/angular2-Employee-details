@@ -13,11 +13,13 @@ export class Company {
     constructor(private _mockDataService: MockDataLoadService) {}
    
     private onAddCompany() {
-        if (!this._mockDataService.isCompanyExist(this.company.name)) 
-            this.companyList.push(this.company);
-            this._mockDataService.addCompanies(this.companyList);
-            this.clearFields();
-        alert("Company already exist")
+        if (this._mockDataService.isCompanyExist(this.company.name)) {
+            alert("Company already exist");
+            return;
+        }
+        this.companyList.push(this.company);
+        this._mockDataService.addCompanies(this.companyList);
+        this.clearFields();
     }
 
     private clearFields() {
