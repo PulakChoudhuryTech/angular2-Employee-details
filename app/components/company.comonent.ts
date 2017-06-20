@@ -1,5 +1,7 @@
 import {Component} from "@angular/core";
 import { MockDataLoadService } from '../services/mock-data-load.service';
+import { Routes, RouterModule } from '@angular/router';
+import { EMSHome } from '../components/ems-home.component';
 
 @Component({
     selector:'company',
@@ -9,8 +11,9 @@ import { MockDataLoadService } from '../services/mock-data-load.service';
 export class Company {
     company : any = {};
     companyList : any[] = [];
+    fontColor : any;
 
-    constructor(private _mockDataService: MockDataLoadService) {}
+    constructor(private _mockDataService: MockDataLoadService, private _routeParams: RouterModule) {}
    
     private onAddCompany() {
         if (this._mockDataService.isCompanyExist(this.company.name)) {
@@ -25,8 +28,9 @@ export class Company {
     private clearFields() {
         this.company = {};
     }
-
     ngOnInit() {
+        this.fontColor = this._mockDataService.getSelectedFontColor();
+        console.log(this._routeParams)
         this.companyList = this._mockDataService.getAllCompanies();
         if (!this.companyList || !this.companyList.length) 
             this._mockDataService.getListOfCompanies().subscribe(data => {

@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 export class MockDataLoadService {
     allCompanies: Object = {};
     allCompanyList : any[] = [];
+    selectedColor : object = {};
     
     constructor(private http : Http) {
         
@@ -35,6 +36,13 @@ export class MockDataLoadService {
         this.createCompanyMap(companies);
     }
 
+    deleteCompany(companyName:any) {
+        var companies = this.getAllCompanies();
+        companies.splice(_.indexOf(companies, _.where(companies, {'name': companyName.name})[0]), 1);
+        this.addCompanies(companies);
+        return companies;
+    }
+
     getListOfCompanies() {
         var that = this;
         return this.http.get('../app/mocks/companies.json').map((res: Response) => {
@@ -62,5 +70,13 @@ export class MockDataLoadService {
     
     addEmployee(employees:any) {
         localStorage.setItem('employees', JSON.stringify(employees));
+    }
+
+    addSelectedColor(colorObj: any) {
+        this.selectedColor = colorObj;
+    }
+
+    getSelectedFontColor() {
+        return this.selectedColor;
     }
 }

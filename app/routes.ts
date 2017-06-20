@@ -19,6 +19,10 @@ export const APP_ROUTES : Routes = [
         component : Company
     },
     {
+        path : 'company/:compName',
+        component : Company
+    },
+    {
         path : 'companydashboard',
         component : CompanyDashboard
     },
@@ -28,5 +32,5 @@ export const APP_ROUTES : Routes = [
     }
 ]
 
-export const ROUTER_MODULE = RouterModule.forRoot(APP_ROUTES);
+export const ROUTER_MODULE = RouterModule.forRoot(APP_ROUTES,  { useHash: true });
 

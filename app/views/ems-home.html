@@ -4,10 +4,11 @@
 <section class="container-fluid text-center">
     <div class="row ems-body">
         <div class="col-xs-2 side-nav">
-            <ems-side-nav [header]="sideNavHeader"></ems-side-nav>
+            <ems-side-nav [header]="sideNavHeader" [fontColor]="fontColor.name"></ems-side-nav>
         </div>
         <div class="col-xs-10 content-nav">
-             <router-outlet></router-outlet>
+            <div class="colorSelector" *ngFor="let color of colorList" [ngStyle]="{'background': color}" (click)="onSelectColor(color)"></div>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </section>

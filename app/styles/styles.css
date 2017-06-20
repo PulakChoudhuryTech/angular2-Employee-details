@@ -42,6 +42,7 @@
 
   .add-employee-container, .add-company-container {
       height: 300px;
+      margin-top: 25px;
   }
 
   .add-employee-container label, .add-company-container label {
@@ -60,4 +61,12 @@
   .add-employee-container .company-dropdown, .add-company-container .company-dropdown {
       position: absolute !important;
       margin-top: 3px;
+  }
+
+  .colorSelector {
+    height: 15px;
+    width: 15px;
+    float: right;
+    padding: 10px;
+    margin: 30px;
   }

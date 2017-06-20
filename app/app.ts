@@ -15,6 +15,8 @@ import { EmployeeDashboard } from './components/employee-dashboard-component';
 import { LocalStorageModule } from 'angular-2-local-storage';
 import { LocalStorageService } from 'angular-2-local-storage';
 import { MockDataLoadService } from './services/mock-data-load.service';
+import  { MyHighlighterDirective } from './directives/my-highlighter';
+// import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 
 @NgModule({
     declarations: [ 
@@ -23,14 +25,14 @@ import { MockDataLoadService } from './services/mock-data-load.service';
                     Employee, 
                     Company, 
                     EmployeeDashboard, 
-                    CompanyDashboard
+                    CompanyDashboard,
+                    MyHighlighterDirective
                 ],
     imports: [BrowserModule, ROUTER_MODULE, FormsModule, HttpModule],
     bootstrap: [EMSHome],
     providers: [MockDataLoadService]
 })
 export class AppModule {
-
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);

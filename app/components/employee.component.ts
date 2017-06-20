@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import { EmployeeList } from '../interfaces/employee-list.interface';
 import { MockDataLoadService } from '../services/mock-data-load.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector:'employee',
@@ -12,13 +13,14 @@ export class Employee {
     employeeList : EmployeeList[];
     companies : any;
 
-    constructor(private _mockDataService: MockDataLoadService) {}
+    constructor(private _mockDataService: MockDataLoadService, private _router : Router) {}
    
     private onAddEmployee() {
         this.employee.empId = this._mockDataService.getEmpIdByCompanyName(this.employee.company);
         this.employeeList.push(this.employee);
         this._mockDataService.addEmployee(this.employeeList);
         this.clearFields();
+        this._router.navigate(['employeedashboard'])
     }
 
     private onSelectCompany(company: string) {

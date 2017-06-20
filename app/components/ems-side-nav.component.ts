@@ -6,12 +6,18 @@ import {SideMenuList} from '../interfaces/side-menu-list.interface'
     selector : 'ems-side-nav',
     templateUrl : 'app/views/ems-side-nav.html',
     styleUrls : ['app/styles/styles.css'],
-    inputs : ['header'],
+    inputs : ['header', 'fontColor'],
+    outputs: ['sideMenuChange'],
     providers : [SideMenuListService]
 })
 export class EMSSideNav {
     public contentList : SideMenuList[]
+    sideMenuChange = new EventEmitter<string>();
     constructor(private _sideMenuListService: SideMenuListService) {
        this.contentList =  _sideMenuListService.getSideMenuList()
+    }
+
+    onChange(value: string) {
+        this.sideMenuChange.emit(value);
     }
 }

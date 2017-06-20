@@ -1,6 +1,6 @@
 <h4>Add Company</h4>
-<div class="container-fluid well add-company-container">
-    <div class="row">
+<div class="container-fluid well add-company-container" [ngStyle]="{'color': fontColor.name}">
+    <div class="row" my-highlighter>
         <div class="col-xs-3">
             <label for="name">Company Name:</label>
             <input type="text" class="form-control" id="empName" [(ngModel)]="company.name">

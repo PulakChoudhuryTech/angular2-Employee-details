@@ -11,14 +11,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let emp of companyList">
-                <td>{{emp.name}}</td>
-                <td>{{emp.type}}</td>
-                <td>{{emp.location}}</td>
-                <td>{{emp.url}}</td>
+            <tr *ngFor="let comp of companyList">
+                <td>{{comp.name}}</td>
+                <td>{{comp.type}}</td>
+                <td>{{comp.location}}</td>
+                <td>{{comp.url}}</td>
                 <td>
-                    <button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                    <button class="btn btn-info"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                    <button class="btn btn-danger" (click)="onDelete(comp)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    <button class="btn btn-info" (click)="onEdit(comp)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                 </td>
             </tr>
         </tbody>
