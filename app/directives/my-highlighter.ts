@@ -9,6 +9,6 @@ export class MyHighlighterDirective {
     }
     @HostListener('click') 
     click() {
-        this._elemRef.nativeElement.style.background = "red";
+        // this._elemRef.nativeElement.style.background = "red";
     }
 }
